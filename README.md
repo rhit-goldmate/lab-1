@@ -1,4 +1,4 @@
-# CSSE-490-lab-0
+# CSSE-490-lab-1
 
 Lab 1: Photo Processing App
 
@@ -21,7 +21,10 @@ $ source venv/bin/activate    # Unix
 $ .\venv\Scripts\Activate.ps1 # Windows
 
 $ pip install -r requirements.txt
+$ pip install -e .
 ```
+
+You will also need a copy of `chromedriver` installed.  On a Mac, you can install it via. `brew install chromedriver`.  On other platforms you can download it from the [chromedriver website](https://chromedriver.chromium.org/).
 
 ### Running Locally
 
