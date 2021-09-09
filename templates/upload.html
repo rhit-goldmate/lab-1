@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Simple Photo Processor Upload Page</h1>
+<form method="POST" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+  {{ form.image.label }} {{ form.image() }}
+  {{ form.submit() }}
+</form>
+{% endblock %}
