@@ -7,7 +7,7 @@ from wtforms import FileField, SubmitField
 spp = Blueprint("spp", __name__)
 
 class FileUploadForm(FlaskForm):
-    image = FileField('Select an image file to upload')
+    image = FileField('Select an image to upload')
     submit = SubmitField('Upload')
 
 @spp.route('/')
@@ -34,6 +34,6 @@ def process():
 # This code borrowed directly from https://stackoverflow.com/a/10170635/35345
 def serve_pil_image(pil_img):
     img_io = BytesIO()
-    pil_img.save(img_io, 'JPEG', quality=70)
+    pil_img.save(img_io, 'JPEG')
     img_io.seek(0)
     return send_file(img_io, mimetype='image/jpeg')

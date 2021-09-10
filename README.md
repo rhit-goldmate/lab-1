@@ -26,6 +26,12 @@ $ pip install -e .
 
 You will also need a copy of `chromedriver` installed.  On a Mac, you can install it via. `brew install chromedriver`.  On other platforms you can download it from the [chromedriver website](https://chromedriver.chromium.org/).
 
+### Running Tests
+
+Run the full test suite with `pytest`.
+
+Run a single test with `pytest test_simple_photo_processory.py::test_func_name`.
+
 ### Running Locally
 
 If you are using Linux, Mac, or git bash on Windows:
