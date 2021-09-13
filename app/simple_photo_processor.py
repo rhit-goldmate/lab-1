@@ -34,6 +34,6 @@ def process():
 # This code borrowed directly from https://stackoverflow.com/a/10170635/35345
 def serve_pil_image(pil_img):
     img_io = BytesIO()
-    pil_img.save(img_io, 'JPEG')
+    pil_img.save(img_io, 'PNG')
     img_io.seek(0)
-    return send_file(img_io, mimetype='image/jpeg')
+    return send_file(img_io, mimetype='image/png')
