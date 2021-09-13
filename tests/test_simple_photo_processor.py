@@ -27,7 +27,10 @@ def client(app):
 
 @pytest.fixture(scope="session")
 def chromedriver():
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    driver = webdriver.Chrome(options=options)
+    # ^Optional argument executable_path may be relevant to some students
     yield driver
     driver.quit()
 
