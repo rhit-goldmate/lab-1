@@ -7,8 +7,10 @@ from flask import url_for
 from PIL import Image, ImageChops
 
 # Fixes https://github.com/pytest-dev/pytest-flask/issues/104
-import multiprocessing
-multiprocessing.set_start_method("fork")
+from sys import platform
+if platform == "darwin":
+    import multiprocessing
+    multiprocessing.set_start_method("fork")
 
 @pytest.fixture(scope="session")
 def app():
