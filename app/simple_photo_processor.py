@@ -25,8 +25,9 @@ def process():
     if form.image.data:
         image_data = request.files['image']
         input_image = Image.open(image_data)
+        
         ## TODO: Actually transform image here
-        output_image = input_image
+        output_image = input_image.filter(ImageFilter.BLUR)
         return serve_pil_image(output_image)
     else:
         return redirect(url_for('upload'))
