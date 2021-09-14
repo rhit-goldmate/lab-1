@@ -12,7 +12,7 @@ class FileUploadForm(FlaskForm):
 
 @spp.route('/')
 def index():
-    return render_template('index.html', name="Eliza")
+    return render_template('index.html', name="Taylor")
 
 @spp.route('/simple_photo_processor', methods=['GET'])
 def upload():
