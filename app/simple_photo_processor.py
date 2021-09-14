@@ -27,7 +27,7 @@ def process():
         input_image = Image.open(image_data)
         
         ## TODO: Actually transform image here
-        output_image = input_image.filter(ImageFilter.GaussianBlur(radius=2))
+        output_image = input_image.filter(ImageFilter.GaussianBlur(radius=10))
         return serve_pil_image(output_image)
     else:
         return redirect(url_for('upload'))
